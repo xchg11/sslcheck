@@ -1,0 +1,21 @@
+checkssl:
+ alarm_days: 10
+ domains: ["rmd5.ru","github.com","ya.ru"]
+ smtptls: ["smtp.example.com","smtp2.example.com"]
+ runscript: "script.sh"
+ debug: false
+ notify:
+  mail:
+   server: "10.10.10.2"
+   port: 25
+   email: ["fire@example.com","example.com"]
+   resent: "4hours"
+   auth:
+    login: "fire@example.com"
+    password: "pass1"
+  telegram:
+  # ( bot -> @IDBot -> cmd -> /getid )
+   touser: ["655000009"]
+   apitoken: "222222:testing"
+   msg: "certcheck info..."
+  
